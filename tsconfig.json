@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "lib": ["esnext", "dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "paths": {
+      "cds/button": ["./elements/cds/button/button.ts"],
+      "cds/themeProvider": ["./elements/cds/themeProvider/themeProvider.ts"],
+      "cds/reset": ["./elements/cds/reset/reset.ts"],
+    },
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2017"
+  },
+  "exclude": ["node_modules", ".dist"]
+}

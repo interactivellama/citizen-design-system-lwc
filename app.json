@@ -1,0 +1,9 @@
+{
+  "environments": {
+  },
+  "env": {
+    "RESTRICT_CORS": "false",
+    "STORYBOOK": "true"
+  },
+  "stack": "heroku-18"
+}

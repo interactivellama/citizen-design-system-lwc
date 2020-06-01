@@ -1,0 +1,127 @@
+@import "cds/reset";
+
+:host {
+  display: inline-flex;
+  color: var(--cds-color-meteorite);
+}
+
+.button {
+  all: unset;
+  align-items: center;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: var(--cds-spacing-1);
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: bold;
+  line-height: 1.25;
+  padding: var(--cds-spacing-3) var(--cds-spacing-5);
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.button--variant {
+  --dark-1: 5%;
+  --dark-2: 15%;
+  background-color: hsl(
+    var(--color-bg-h),
+    var(--color-bg-s),
+    var(--color-bg-l)
+  );
+  border: 1px solid hsl(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l));
+  box-shadow: 0 1px 0
+    hsl(
+      var(--color-bg-h),
+      var(--color-bg-s),
+      calc(var(--color-bg-l) - var(--dark-2))
+    );
+  color: var(--color);
+}
+
+.button--variant:hover:not(.button--disabled),
+.button--variant:focus:not(.button--disabled),
+.button--variant:active:not(.button--disabled) {
+  color: var(--color);
+}
+
+.button--variant:hover:not(.button--disabled),
+.button--variant:focus:not(.button--disabled) {
+  background-color: hsl(
+    var(--color-bg-h),
+    var(--color-bg-s),
+    calc(var(--color-bg-l) - var(--dark-1))
+  );
+  border-color: hsl(
+    var(--color-bg-h),
+    var(--color-bg-s),
+    calc(var(--color-bg-l) - var(--dark-1))
+  );
+}
+
+.button--variant:active {
+  background-color: hsl(
+    var(--color-bg-h),
+    var(--color-bg-s),
+    calc(var(--color-bg-l) - var(--dark-2))
+  );
+  border-color: hsl(
+    var(--color-bg-h),
+    var(--color-bg-s),
+    calc(var(--color-bg-l) - var(--dark-2))
+  );
+  box-shadow: 0 1px 0
+      hsl(
+        var(--color-bg-h),
+        var(--color-bg-s),
+        calc(var(--color-bg-l) - var(--dark-2))
+      ),
+    0 0 4px hsl(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l));
+}
+
+.button--disabled {
+  background: var(--cds-color-fog);
+  border-color: var(--cds-color-fog);
+  box-shadow: 0 1px 0 var(--cds-color-fog);
+  color: var(--cds-color-granite);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.button--neutral {
+  color: var(--cds-color-brand);
+  background-color: var(--cds-color-white);
+  box-shadow: 0px 0px 0px 1px hsla(0, 0%, 0%, 0.05),
+    0 2px 0 hsla(0, 0%, 0%, 0.05);
+}
+
+.button--neutral:hover,
+.button--neutral:focus {
+  background-color: var(--cds-color-sand);
+}
+
+.button--neutral:active {
+  background-color: var(--cds-color-fog);
+  color: var(--cds-color-meteorite);
+}
+
+.button--variant.button--brand {
+  --color: var(--cds-color-white);
+  --color-bg-h: var(--cds-color-brand-h);
+  --color-bg-s: var(--cds-color-brand-s);
+  --color-bg-l: var(--cds-color-brand-l);
+}
+
+.button--variant.button--success {
+  --color: var(--cds-color-white);
+  --color-bg-h: var(--cds-color-success-h);
+  --color-bg-s: var(--cds-color-success-s);
+  --color-bg-l: var(--cds-color-success-l);
+}
+
+.button--variant.button--destructive {
+  --color: var(--cds-color-white);
+  --color-bg-h: var(--cds-color-destructive-h);
+  --color-bg-s: var(--cds-color-destructive-s);
+  --color-bg-l: var(--cds-color-destructive-l);
+}

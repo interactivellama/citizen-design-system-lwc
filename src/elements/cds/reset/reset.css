@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  line-height: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
