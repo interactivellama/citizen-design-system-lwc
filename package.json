@@ -66,7 +66,7 @@
     "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
     "husky": "^4.2.1",
-    "immer": "^5.3.2",
+    "immer": "^8.0.1",
     "jest": "^24.9.0",
     "jest-environment-jsdom-sixteen": "^1.0.2",
     "jest-fetch-mock": "^3.0.3",
